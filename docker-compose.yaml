@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  haproxy:
+    build: haproxy
+    ports:
+      - "8080:80"
+      - "8499:499"
+  web:
+    image: "nginxdemos/hello"
+    ports:
+      - "8081:80"
